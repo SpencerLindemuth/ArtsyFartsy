@@ -1,7 +1,7 @@
 require 'rest-client'
 require 'json'
 
-PUBLIC_DOMAIN_URL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects'
+PUBLIC_DOMAIN_URL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects?&departmentIds=11'
 
 INDIVIDUAL_URL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/'
 
