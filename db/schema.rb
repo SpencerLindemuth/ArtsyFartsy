@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_14_215047) do
+ActiveRecord::Schema.define(version: 2019_08_15_163148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "galleries", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "piece_id"
+  end
 
   create_table "pieces", force: :cascade do |t|
     t.boolean "isHighlight"
@@ -33,6 +38,11 @@ ActiveRecord::Schema.define(version: 2019_08_14_215047) do
     t.string "tags"
     t.string "country"
     t.string "artistNationality"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
   end
 
 end
