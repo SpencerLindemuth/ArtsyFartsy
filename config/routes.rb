@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :pieces
   resources :explore
   resources :highlight
+  post 'users/add' => 'users#add'
+  get 'users/:id/gallery' => 'users#gallery'
 end
