@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :highlight
   post 'users/add' => 'users#add'
   get 'users/:id/gallery' => 'users#gallery'
+  delete 'users' => 'users#destroy'
 end

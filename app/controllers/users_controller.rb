@@ -12,4 +12,9 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         render json: @user.pieces
     end
+
+    def destroy
+        @user = User.find(params[:user_id])
+        @user.pieces.destroy(params[:piece_id])
+    end
 end
