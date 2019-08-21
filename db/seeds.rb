@@ -1,7 +1,7 @@
 require 'rest-client'
 require 'json'
 
-PUBLIC_DOMAIN_URL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects?&departmentIds=15'
+PUBLIC_DOMAIN_URL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects?&departmentIds=13'
 
 INDIVIDUAL_URL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/'
 
@@ -19,7 +19,7 @@ end
 # end
 
 def get_individual_objects(object)
-    object["objectIDs"].each do |id|
+    object["objectIDs"][0..2000].each do |id|
         response = RestClient.get(INDIVIDUAL_URL + "#{id}")
         new_piece = JSON.parse(response)
         persist_to_db(new_piece)
