@@ -21,7 +21,9 @@ class UsersController < ApplicationController
     def create
         @user = User.new(params.permit(:username, :password))
         if @user.save
-            render json: {id: @user.id, username: @user.username}
+            render json: {
+                jwt: encode_token({id: @user.id, username: @user.username})
+              }
         else
             :bad_request
         end

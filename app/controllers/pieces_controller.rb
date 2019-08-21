@@ -1,6 +1,6 @@
 class PiecesController < ApplicationController
     def index
-        @pieces = Piece.all[(Piece.all.length-100)..Piece.all.length]
+        @pieces = Piece.all.sample(100)
         render json: @pieces
     end
 
