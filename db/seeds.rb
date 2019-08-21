@@ -27,7 +27,7 @@ def get_individual_objects(object)
 end
 
 def persist_to_db(piece)
-    if piece.primaryImage != ""
+    if piece["primaryImage"] != ""
         Piece.create(isHighlight: piece["isHighlight"], primaryImage: piece["primaryImage"], primaryImageSmall: piece["primaryImageSmall"], department: piece["department"], objectName: piece["objectName"], title: piece['title'], culture: piece['culture'], artistDisplayName: piece['artistDisplayName'], objectDate: piece['objectDate'], medium: piece['medium'], dimensions: piece['dimensions'], classification: piece['classification'], repository: piece['repository'], objectURL: piece['objectUrl'], tags: piece['tags'], country: piece['country'], artistNationality: piece['artistNationality'])
     end
 end
