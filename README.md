@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the code for the Rails Backend API for the Artsy Fartsy React Frontend. 
 
-Things you may want to cover:
+This API handles authentication for login and serves art piece json objects from the MET's open API public domain collection
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Created by <a href="https://github.com/cthomasw">Claire Wilbert</a> and <a href="https://github.com/spencerlindemuth">Spencer Lindemuth </a>
